@@ -587,8 +587,8 @@ p.works__description {
   width: 70px;
   height: 70px;
   font-size: 45px;
-  background-color: var(--main-bg-color);
-  color: var(--main-font-color);
+  background-color: var(--main-font-color);
+  color: var(--main-bg-color);
   border-radius: 50%;
   opacity: 0;
   pointer-events: none;
