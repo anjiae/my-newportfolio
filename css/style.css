@@ -387,6 +387,13 @@ p.works__description {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  opacity: 1;
+  transition: all var(--animation-duration) ease-in;
+}
+
+.work__projects.anim-out {
+  opacity: 0.6;
+  transform: scale(0.96) translateY(40px);
 }
 
 .project {
@@ -399,6 +406,10 @@ p.works__description {
   justify-content: center;
   align-items: center;
   margin: 10px;
+}
+
+.project.invisible {
+  display: none;
 }
 
 .project__img {
@@ -421,7 +432,6 @@ p.works__description {
   transition: all var(--animation-duration) ease-in;
   transform: translate(10px);
   outline: 8px solid var(--color-emerald-green);
-  cursor: pointer;
 }
 
 .project:hover .project__description {

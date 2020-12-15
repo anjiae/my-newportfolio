@@ -263,13 +263,13 @@
               </p>
             </div>
             <div class="work__categories">
-              <button class="category__btn active">All<span class="category__cnt">4</span></button>
-              <button class="category__btn">clone coding<span class="category__cnt">1</span></button>
-              <button class="category__btn">sample sites<span class="category__cnt">2</span></button>
-              <button class="category__btn">portfolio site<span class="category__cnt">1</span></button>
+              <button class="category__btn selected" data-filter="*">All<span class="category__cnt">4</span></button>
+              <button class="category__btn" data-filter="clone-coding">clone coding<span class="category__cnt">1</span></button>
+              <button class="category__btn" data-filter="sample-site">sample sites<span class="category__cnt">2</span></button>
+              <button class="category__btn" data-filter="portfolio">portfolio site<span class="category__cnt">1</span></button>
             </div>
             <div class="work__projects">
-              <div class="project">
+              <div class="project" data-type="clone-coding">
                 <img src="imgs/mywork/work-twayclone.jpg" alt="projectIMG01" class="project__img">
                 <div class="project__description">
                   <h3>tway</h3>
@@ -278,7 +278,7 @@
                   <a href="https://github.com/anjiae/tway-clone.git" class="work__gitBtn" target="_blank">check coding</a>
                 </div>
               </div>
-              <div class="project">
+              <div class="project" data-type="sample-site">
                 <img src="imgs/mywork/work-rorahair.jpg" alt="projectIMG02" class="project__img">
                 <div class="project__description">
                   <h3>rorahair</h3>
@@ -287,7 +287,7 @@
                   <a href="https://github.com/anjiae/rorahair.git" class="work__gitBtn" target="_blank">check coding</a>
                 </div>
               </div>
-              <div class="project">
+              <div class="project" data-type="sample-site">
                 <img src="imgs/mywork/work-reocean.jpg" alt="projectIMG04" class="project__img">
                 <div class="project__description">
                   <h3>reocean</h3>
@@ -296,7 +296,7 @@
                   <a href="" class="work__gitBtn" target="_blank">check coding</a>
                 </div>
               </div>
-              <div class="project">
+              <div class="project" data-type="portfolio">
                 <img src="imgs/mywork/work-portfolio.jpg" alt="projectIMG03" class="project__img">
                 <div class="project__description">
                   <h3>portfolio site</h3>
