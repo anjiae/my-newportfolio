@@ -157,7 +157,6 @@
   letter-spacing: 2px;
 }
 
-
 .navbar__menulist {
   display: flex;
 }
@@ -183,10 +182,11 @@
 .navbar__toggle-btn {
   position: absolute;
   right: 5%;
-  top: 35%;
+  top: 35px;
   font-size: var(--font-midium);
   color: var(--main-font-color);
   display: none;
+  cursor: pointer;
 }
 
 /* Main > About, Skills, My Work, Contact */
@@ -428,16 +428,44 @@ p.works__description {
   transform: translate(0);
 }
 
+.project__description h3 {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  font-size: var(--font-regular);
+}
+
 .project__description h3:after {
   content: '';
-  width: 30px;
-  height: 2px;
+  width: 50px;
+  height: 3px;
+  transform: translate(-50%);
+  margin: 8px 0;
   display: block;
-  margin: 10px 0 10px -15px;
   background-color: var(--color-emerald-green);
   position: relative;
   left: 50%;
 }
+
+.project__description span {
+  display: block;
+  margin-bottom: 8px;
+  font-size: var(--font-micro);
+}
+
+.work__linkBtn, .work__gitBtn {
+  margin: 4px auto;
+  width: 150px;
+  display: inline-block;
+  color: var(--color-white);
+  font-size: var(--font-micro);
+  background-color: var(--color-dark-orange);
+  border: 1px solid var(--color-dark-orange);
+  border-radius: 15px;
+  text-align: center;
+}
+
+
 
 
 /* main Contact Me Form */
