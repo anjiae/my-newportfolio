@@ -65,8 +65,9 @@
 
   .project__description {
     opacity: 0.6;
-    
+    transform: translate(0);
   }
+
 
   .arrow-up {
     width: 50px;

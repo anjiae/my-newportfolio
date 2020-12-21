@@ -175,6 +175,7 @@
 }
 
 .navbar__menulist__item:hover {
+  border-color: var(--color-beige-white);
   background-color: var(--main-font-color);
   color: var(--main-bg-color);
 }
@@ -357,12 +358,12 @@ p.works__description {
   cursor: pointer;
 }
 
-.category__btn.active, .category__btn:hover {
+.category__btn.selected, .category__btn:hover {
   background-color: var(--main-bg-color);
   color : var(--main-font-color);
 }
 
-.category__btn.active .category__cnt,
+.category__btn.selected .category__cnt,
 .category__btn:hover .category__cnt {
   opacity: 1;
   top:0;

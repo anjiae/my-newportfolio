@@ -1,7 +1,7 @@
 ﻿<?
 //받는 이
   $recipient = "jiae1025@gmail.com";
-//제목 처리
+//Title
 //  $subject = '=?UTF-8?B?'.base64_encode($_GET['title']).'?=';
 //메일주소
   $mail_from = '=?UTF-8?B?'.base64_encode($_GET['email']).'?=';
@@ -34,12 +34,12 @@
   if (!$email)
     echo "<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" /> 
         <script>
-        window.alert('메일 발송이 실패하였습니다. ');
+        window.alert('Failed to send your message.');
         history.go(-1);
         </script>";
   else
     echo "<script>
-        window.alert('메일이 정상적으로 발송되었습니다.');
+        window.alert('Your message was sent successfully. Thanks.');
         history.go(-1);
         </script>";
 ?>
