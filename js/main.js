@@ -58,6 +58,7 @@ document.addEventListener('scroll', () => {
 
 //handle "arrow up" button
 arrowUp.addEventListener('click', () => {
+  navbarMenu.classList.remove('open');
   scrollIntoView('#home');
 });
 

@@ -35,12 +35,6 @@ ul {
   list-style: none;
 }
 
-.fixedclear:after {
-  content: '';
-  display: block;
-  clear: both;
-}
-
 input, select, textarea, button {
   display: block;
   border: none;
