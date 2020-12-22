@@ -269,6 +269,17 @@ p.about__description {
   color: var(--color-light-orange);
 }
 
+.major__title {
+  color: var(--main-bg-color);
+}
+.major__title h2 {
+  font-size: var(--font-midium);
+}
+
+.major__title p {
+  font-size: var(--font-small);
+}
+
 
 /* Skills */
 #skills {
