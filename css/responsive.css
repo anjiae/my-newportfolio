@@ -15,15 +15,6 @@
     line-height: 18px;
   }
 
-/* project: hover */
-  /* .project__img {
-    opacity: 0.4;
-  } */
-
-  /* .project__description {
-    opacity: 0.6;
-    transform: translate(0);
-  } */
 }
 /* For below 840px screen width */
 @media screen and (max-width: 840px) {
