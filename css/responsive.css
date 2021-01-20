@@ -71,8 +71,11 @@
   
 }
 /* For below 768px screen width */
-@media screen and (max-width: 768px) {
-  
+@media screen and (max-width: 768px) {  
+
+  .navbar__logo p {
+    left: 100px;
+  }
 
   .about__major {
     flex-direction: column;
