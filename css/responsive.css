@@ -20,7 +20,7 @@
 @media screen and (max-width: 840px) {
   :root {
     /* font-size */
-  --font-large: 2.5em;
+  --font-large: 2em;
   --font-midium: 1.5em;
   --font-regular: 1em;
   --font-small: 0.9em;
@@ -66,12 +66,10 @@
     font-size: 30px;
     right: 25px;
     bottom: 25px;
+    line-height: 30px;
   }
   
 }
-
-
-
 /* For below 768px screen width */
 @media screen and (max-width: 768px) {
   
@@ -101,12 +99,17 @@
     flex-grow: 1;
   }
 
+
   .contact__form {
     flex-direction: column;
   }
 
   .contact__btn {
     display: inline-block;
+  }
+
+  .project__btn {
+    bottom: 0;
   }
 }
 
@@ -124,6 +127,10 @@
   .navbar__logo img {
     height: 70px;
     margin-left: 10px;
+  }
+
+  .navbar__logo p {
+    left: 70px;
   }
 
   .navbar__toggle-btn {

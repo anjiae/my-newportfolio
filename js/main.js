@@ -39,7 +39,10 @@ navbarToggleBtn.addEventListener("click", () => {
   navbarMenu.classList.toggle("open");
 });
 
+//-----------------------------------------------------------------//
+
 //show "arrow up" button
+const home = document.querySelector('.home__container');
 const arrowUp = document.querySelector(".arrow-up");
 const homeHeight = home.getBoundingClientRect().height;
 document.addEventListener("scroll", () => {
@@ -56,6 +59,30 @@ arrowUp.addEventListener("click", () => {
   scrollIntoView("#home");
 });
 
+//-----------------------------------------------------------------//
+// About icon scroll event
+function isElUnderBottom(element, triggerDiff) {
+  const { top } = element.getBoundingClientRect();
+  const { innerHeight } = window;
+  return top > innerHeight + (triggerDiff || 0);
+}
+
+function handleScroll() {
+  const elems = document.querySelectorAll('.up-scroll');
+  elems.forEach(element => {
+    if (isElUnderBottom(element, -250)) {
+      element.style.opacity = "0";
+      element.style.transform = 'translateY(100px)';
+    } else {
+      element.style.opacity = "1";
+      element.style.transform = 'translateY(0px)';
+    }
+  });
+}
+
+window.addEventListener('scroll', handleScroll);
+
+//-----------------------------------------------------------------//
 //projects
 const workBtnContainer = document.querySelector(".work__categories");
 const projectContainer = document.querySelector(".work__projects");
@@ -85,6 +112,8 @@ workBtnContainer.addEventListener("click", e => {
     projectContainer.classList.remove("anim-out");
   }, 300);
 });
+
+//-----------------------------------------------------------------//
 
 //intersectionObserver
 const sectionIds = ["#home", "#about", "#skills", "#works", "#contact"];
@@ -131,7 +160,7 @@ const observerCallback = (entries, observer) => {
 const observer = new IntersectionObserver(observerCallback, observerOptions);
 sections.forEach(section => observer.observe(section));
 
-window.addEventListener("scroll", () => {
+window.addEventListener("wheel", () => {
   if (window.scrollY === 0) {
     selectedNavIndex = 0;
   } else if (
@@ -142,26 +171,4 @@ window.addEventListener("scroll", () => {
   selectNavItem(navItems[selectedNavIndex]);
 });
 
-
-// About icon scroll event
-function isElUnderBottom(element, triggerDiff) {
-  const { top } = element.getBoundingClientRect();
-  const { innerHeight } = window;
-  return top > innerHeight + (triggerDiff || 0);
-}
-
-function handleScroll() {
-  const elems = document.querySelectorAll('.up-scroll');
-  elems.forEach(element => {
-    if (isElUnderBottom(element, -250)) {
-      element.style.opacity = "0";
-      element.style.trasform = 'translateY(100px)';
-    } else {
-      element.style.opacity = "1";
-      element.style.trasform = 'translateY(0px)';
-    }
-  });
-}
-
-window.addEventListener('scroll', handleScroll);
 

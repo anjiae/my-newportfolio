@@ -63,7 +63,7 @@
           <div id="homeBackground"></div>
           <!-- Header > Home -->
           <div id="home">
-            <div>
+            <div class="home__container">
               <div class="home__img">
                 <img
                   src="imgs/profile01.jpg"
@@ -71,7 +71,20 @@
                   class="home__avatar"/>
               </div>
               <div class="home__description">
-                <h1>Welcome to my Portfolio website</h1>
+                <h1 class="loading__words">
+                  <span>Wel</span>
+                  <span>co</span>
+                  <span>me</span>
+                  <span>to</span>
+                  <span>my</span>
+                  <span>Po</span>
+                  <span>rt</span>
+                  <span>fol</span>
+                  <span>io</span>
+                  <span>we</span>
+                  <span>bs</span>
+                  <span>ite</span>
+                </h1>
               </div>
               <button class="home__contact">Contact Me</button>
             </div>
@@ -284,15 +297,54 @@
               </div>
               <div class="work__projects">
                 <div class="project" data-type="clone-coding">
-                  <img
+                  <div class="project__view">
+                    <img
                     src="imgs/mywork/work-twayclone.jpg"
                     alt="projectIMG01"
                     class="project__img"/>
-                  <button class="project__btn">Read more</button>
-                  <div class="project__description">
-                    <h3>tway</h3>
+                    <a href="#tway" class="readmore__btn">Read more</a>
+                  </div>
+                  
+                </div>
+                <div class="project" data-type="sample-site">
+                  <div class="project__view">
+                    <img
+                    src="imgs/mywork/work-rorahair.jpg"
+                    alt="projectIMG02"
+                    class="project__img"/>
+                    <a href="#rorahair" class="readmore__btn">Read more</a>
+                  </div>
+                  
+                </div>
+                <div class="project" data-type="sample-site">
+                  <div class="project__view">
+                    <img
+                    src="imgs/mywork/work-reocean.jpg"
+                    alt="projectIMG04"
+                    class="project__img"/>
+                    <a href="#reocean" class="readmore__btn">Read more</a>
+                  </div>
+                  
+                </div>
+                <div class="project" data-type="portfolio">
+                  <div class="project__view">
+                    <img
+                    src="imgs/mywork/work-portfolio.jpg"
+                    alt="projectIMG03"
+                    class="project__img"/>
+                    <a href="#mysite" class="readmore__btn">Read more</a>
+                  </div>
+                  
+                </div>
+              </div> <!-- End project -->
+              <!-- Start Projects__description -->
+              <div id="modal__projects">
+                <div class="modal__container">
+                  <div id="tway" class="project__description">
+                    <h3>tway 항공사 페이지의 클론코딩입니다.</h3>
                     <span>Clone coding with HTML5 and CSS3 with jQuery</span>
                     <span>포트폴리오용 데스크탑 전용 사이트입니다.</span>
+                    <span>플러그인 없이 슬라이드를 구현하였습니다.</span>
                     <a
                       href="http://www.tway.getmyportfolio.com/"
                       class="work__linkBtn"
@@ -305,18 +357,12 @@
                       target="_blank">
                       check code
                     </a>
+                    <a href="javascritp:" class="closeBtn">CLOSE</a>
                   </div>
-                </div>
-                <div class="project" data-type="sample-site">
-                  <img
-                    src="imgs/mywork/work-rorahair.jpg"
-                    alt="projectIMG02"
-                    class="project__img"/>
-                  <button class="project__btn">Read more</button>
-                  <div class="project__description">
-                    <h3>rorahair</h3>
+                  <div id="rorahair" class="project__description">
+                    <h3>RoraHair 홍보를 위해 제작한 샘플 페이지입니다.</h3>
                     <span>HTML5 and CSS3 with media query, Javacript, Bootstrap</span>
-                    <span>포트폴리오와 실제 사용을 위한 반응형 페이지입니다.</span>
+                    <span>포트폴리오를 위해 제작된 반응형 페이지입니다.</span>
                     <a
                       href="http://www.rorahair.com/"
                       class="work__linkBtn"
@@ -329,19 +375,13 @@
                       target="_blank">
                       check code
                     </a>
+                    <a href="javascritp:" class="closeBtn">CLOSE</a>
                   </div>
-                </div>
-                <div class="project" data-type="sample-site">
-                  <img
-                    src="imgs/mywork/work-reocean.jpg"
-                    alt="projectIMG04"
-                    class="project__img"/>
-                  <button class="project__btn">Read more</button>
-                  <div class="project__description">
-                    <h3>reocean</h3>
+                  <div id="reocean" class="project__description">
+                    <h3>reocean 홍보를 위해 제작한 샘플 페이지입니다.</h3>
                     <span>HTML5 and CSS3 with media query, Javascript</span>
                     <span>
-                      포트폴리오와 실제 사용을 위한 반응형 페이지입니다.
+                      포트폴리오를 위해 제작된 반응형 페이지입니다.
                     </span>
                     <a
                       href="http://reocean.getmyportfolio.com/"
@@ -355,18 +395,12 @@
                       target="_blank">
                       check code
                     </a>
+                    <a href="javascritp:" class="closeBtn">CLOSE</a>
                   </div>
-                </div>
-                <div class="project" data-type="portfolio">
-                  <img
-                    src="imgs/mywork/work-portfolio.jpg"
-                    alt="projectIMG03"
-                    class="project__img"/>
-                  <button class="project__btn">Read more</button>
-                  <div class="project__description">
-                    <h3>portfolio site</h3>
+                  <div id="mysite" class="project__description">
+                    <h3>portfolio site 현재 사이트입니다.</h3>
                     <span>HTML5 and CSS3 with media query, Javascript</span>
-                    <span>포트롤리오 페이지입니다. </span>
+                    <span>포트폴리오 웹사이트입니다. 반응형으로 제작되었으며, CSS애니메이션 효과를 사용하였습니다.</span>
                     <a
                       href="http://www.getmyportfolio.com/"
                       class="work__linkBtn"
@@ -379,6 +413,7 @@
                       target="_blank">
                       check code
                     </a>
+                    <a href="javascritp:" class="closeBtn">CLOSE</a>
                   </div>
                 </div>
               </div>

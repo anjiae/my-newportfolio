@@ -83,40 +83,61 @@
   margin-top: 5%;
 }
 
-.home__description h1{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translateX(-50%);
-  color: transparent;
-  white-space: nowrap;
-  margin: 0;
-  padding: 0;
-  font-size: var(--font-large);
-}
-
-.home__description h1::before {
-  content: "Welcome to my Portfolio website";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+.loading__words span {
+  display: inline-block;
+  margin: 0 -.05em;
+  animation: loading 2s infinite alternate;
+  font-size: var(--font-midium);
   color: var(--color-dark-gray);
-  overflow: hidden;
-  border-right: 3px solid var(--color-wine);
-  animation: typing 10s steps(32) infinite;
 }
 
-@keyframes typing {
+.loading__words span:nth-child(2) {
+  animation-delay: .1s;
+}
+.loading__words span:nth-child(3) {
+  animation-delay: .2s;
+  margin-right: 10px;
+}
+.loading__words span:nth-child(4) {
+  animation-delay: .3s;
+  margin-right: 10px;
+}
+.loading__words span:nth-child(5) {
+  animation-delay: .4s;
+  margin-right: 10px;
+}
+.loading__words span:nth-child(6) {
+  animation-delay: .5s;
+}
+.loading__words span:nth-child(7) {
+  animation-delay: .6s;
+}
+.loading__words span:nth-child(8) {
+  animation-delay: .7s;
+}
+.loading__words span:nth-child(9) {
+  animation-delay: .8s;
+  margin-right: 10px;
+}
+.loading__words span:nth-child(10) {
+  animation-delay: .9s;
+}
+.loading__words span:nth-child(11) {
+  animation-delay: .10s;
+}
+.loading__words span:nth-child(12) {
+  animation-delay: .11s;
+}
+
+@keyframes loading {
   0% {
-    width: 0%;
+    opacity: 1;
   }
   50% {
-    width: 100%;
+    opacity: 0.5;
   }
   100% {
-    width: 0%;
+    opacity: 0;
   }
 }
 
@@ -129,7 +150,7 @@
   color: var(--color-beige-white);
   font-size: var(--font-small);
   background-color: var(--color-wine);
-  margin-top: 110px;
+  margin-top: 40px;
   padding: 10px 15px;
   border-radius: 10px;
   border: 1px solid var(--color-wine);
@@ -169,6 +190,7 @@
 }
 
 .navbar__logo {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -179,9 +201,39 @@
 }
 
 .navbar__logo p {
-  color: var(--main-font-color);
-  font-size: var(--font-regular);
+  position: absolute;
+  top: 30%;
+  left: 120px;
+  color: transparent;
+  white-space: nowrap;
+  margin: 0;
+  padding: 0;
   letter-spacing: 2px;
+  font-size: var(--font-regular);
+}
+
+.navbar__logo p::before {
+  content: "AN JIAE";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: var(--main-font-color);
+  overflow: hidden;
+  animation: typing 5s steps(7) infinite;
+}
+
+@keyframes typing {
+  0% {
+    width: 0%;
+  }
+  50% {
+    width: 100%;
+  }
+  100% {
+    width: 0%;
+  }
 }
 
 .navbar__menulist {
@@ -279,27 +331,23 @@
 
 .about__description span {
   display: block;
-  animation: slidein 3s ease-in-out;
+  animation: showText 3s ease-in-out;
 }
 
-@keyframes slidein {
+@keyframes showText {
   0% {
-    margin-left: 100%;
-    width: 300%;
+    opacity: 0;
   }
   25% {
-    margin-left: 55%;
-    width: 200%;
+    opacity: 0.5;
     color: var(--color-light-orange);
   }
   50% {
-    margin-left: 25%;
-    width: 150%;
+    opacity: 0.8;
     color: var(--color-dark-orange);
   }
   100% {
-    margin-left: 0;
-    width: 100%;
+    opacity: 1;
     color: var(--color-dark-gray);
   }
 }
@@ -414,6 +462,7 @@
 
 /* Works */
 #works {
+  position: relative;
   padding-bottom: 8%;
 }
 
@@ -479,10 +528,8 @@ p.works__description {
 }
 
 .project {
-  position: relative;
   width: 250px;
   height: 280px;
-  margin: 2px;
   background-color: var(--color-white);
   display: flex;
   justify-content: center;
@@ -494,48 +541,87 @@ p.works__description {
   display: none;
 }
 
+.project__view {
+  position: relative;
+}
+
 .project__img {
   max-width: 100%;
   max-height: 100%;
+  opacity: 0.7;
 }
 
-.project__btn {
+.readmore__btn {
+  display: block;
+  width: 70%;
   position: absolute;
-  bottom: 10%;
+  bottom: -50px;
+  left: 50%;
+  transform: translateX(-50%);
   border: 1px solid var(--main-font-color);
-  padding: 5px 12px;
-  font-size: var(--font-small);
+  padding: 10px 15px;
+  font-size: var(--font-regular);
   background-color: var(--main-bg-color);
   color: var(--main-font-color);
   border-radius: 15px;
   cursor: pointer;
 }
 
+/* project__description MODAL */
+#modal__projects {
+  display: none;
+  z-index: 20;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(50, 50, 50, 0.8);
+  transition: opacity .3s ease-in;
+}
+
 .project__description {
   position: absolute;
   background-color: var(--main-bg-color);
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  top: 50%;
+  left: 50%;
+  width: 90%;
+  height: 80%;
   color: var(--color-white);
   display: flex;
   flex-direction: column;
   justify-content: center;
-  opacity: 0;
   transition: all 300ms ease-in;
-  transform: translate(10px);
+  transform: translate(-50%, -50%);
   outline: 8px solid var(--color-emerald-green);
+  opacity: 0;
   pointer-events: none;
 }
 
+.project__description:nth-child(1) {
+  z-index: 4;
+}
+.project__description:nth-child(2) {
+  z-index: 3;
+}
+.project__description:nth-child(3) {
+  z-index: 2;
+}
+.project__description:nth-child(4) {
+  z-index: 1;
+}
+
+.project__description.modal-show {
+  opacity: 1;
+  pointer-events: auto;
+}
 
 
 .project__description h3 {
   position: relative;
   display: inline-block;
   width: 100%;
-  font-size: var(--font-regular);
+  font-size: var(--font-midium);
 }
 
 .project__description h3:after {
@@ -543,7 +629,7 @@ p.works__description {
   width: 50px;
   height: 3px;
   transform: translate(-50%);
-  margin: 8px 0;
+  margin: 30px 0;
   display: block;
   background-color: var(--color-emerald-green);
   position: relative;
@@ -552,21 +638,37 @@ p.works__description {
 
 .project__description span {
   display: block;
-  margin-bottom: 8px;
-  font-size: var(--font-micro);
+  margin-bottom: 10px;
+  font-size: var(--font-regular);
 }
 
 .work__linkBtn,
 .work__gitBtn {
-  margin: 4px auto;
+  margin: 8px auto;
+  padding: 5px 15px;
   width: 150px;
-  display: inline-block;
+  display: block;
   color: var(--color-white);
-  font-size: var(--font-micro);
+  font-size: var(--font-small);
   background-color: var(--color-dark-orange);
   border: 1px solid var(--color-dark-orange);
   border-radius: 15px;
   text-align: center;
+}
+
+.work__linkBtn {
+  margin-top: 50px;
+}
+
+.closeBtn {
+  display: inline-block;
+  margin: 10px auto;
+  text-align: center;
+  padding: 6px 10px;
+  background-color: var(--color-beige-white);
+  color: var(--color-dark-gray);
+  border-radius: 15px;
+  font-size: var(--font-micro);
 }
 
 /* main Contact Me Form */
@@ -685,6 +787,7 @@ p.works__description {
   width: 70px;
   height: 70px;
   font-size: 45px;
+  line-height: 45px;
   background-color: var(--main-font-color);
   color: var(--main-bg-color);
   border-radius: 50%;

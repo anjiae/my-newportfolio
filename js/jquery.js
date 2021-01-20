@@ -23,6 +23,19 @@ jQuery(function(){
   });
 
 
+  // modal
 
+  $(window).on({
+    hashchange: function(){
+      $('#modal__projects').css('display', 'block');
+      $(':target').addClass('modal-show');
+    }
+  });
 
+  $('.closeBtn').on({
+    click: function(){
+      $('#modal__projects').css('display', 'none');
+      $(':target').removeClass('modal-show');
+    }
+  });
 });
