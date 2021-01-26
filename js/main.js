@@ -61,8 +61,8 @@ arrowUp.addEventListener("click", () => {
 
 //-----------------------------------------------------------------//
 // About icon scroll event
-function isElUnderBottom(element, triggerDiff) {
-  const { top } = element.getBoundingClientRect();
+function isElUnderBottom(ele, triggerDiff) {
+  const { top } = ele.getBoundingClientRect();
   const { innerHeight } = window;
   return top > innerHeight + (triggerDiff || 0);
 }
@@ -71,10 +71,10 @@ function handleScroll() {
   const elems = document.querySelectorAll('.up-scroll');
   elems.forEach(element => {
     if (isElUnderBottom(element, -250)) {
-      element.style.opacity = "0";
+      element.style.opacity = '0';
       element.style.transform = 'translateY(100px)';
     } else {
-      element.style.opacity = "1";
+      element.style.opacity = '1';
       element.style.transform = 'translateY(0px)';
     }
   });
@@ -160,11 +160,11 @@ const observerCallback = (entries, observer) => {
 const observer = new IntersectionObserver(observerCallback, observerOptions);
 sections.forEach(section => observer.observe(section));
 
-window.addEventListener("wheel", () => {
+window.addEventListener('wheel', () => {
   if (window.scrollY === 0) {
     selectedNavIndex = 0;
   } else if (
-    Math.round(window.crollY + window.innerHeight) >= document.body.clientHeight
+    Math.round(window.scrollY + window.innerHeight) >= document.body.clientHeight
   ) {
     selectedNavIndex = navItems.length - 1;
   }
