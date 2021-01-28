@@ -390,7 +390,7 @@
 .major__title {
   color: var(--main-bg-color);
 }
-.major__title h2 {
+.major__title h3 {
   font-size: var(--font-midium);
 }
 
@@ -466,7 +466,7 @@
   padding-bottom: 8%;
 }
 
-h1.works__title {
+h2.works__title {
   color: var(--color-dark-gray);
 }
 
