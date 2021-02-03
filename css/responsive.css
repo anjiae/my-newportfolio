@@ -73,6 +73,12 @@
 /* For below 768px screen width */
 @media screen and (max-width: 768px) {  
 
+  .home__img {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+  }
+
   .navbar__logo p {
     left: 100px;
   }
